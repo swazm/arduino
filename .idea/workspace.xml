@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Project" targetName="PLATFORMIO" />
+      <config projectName="Project" targetName="DEBUG" />
+      <config projectName="Project" targetName="swazm-arduino" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec922180-b3d3-40f1-af0b-2568113a9075" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/clion.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/platformio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/cJSON/cJSON.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/cJSON/cJSON.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/include/secp256k1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/include/secp256k1_ecdh.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/include/secp256k1_recovery.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/basic-config.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecdsa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecdsa_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/eckey.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/eckey_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_const.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_const_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_gen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_gen_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_static_context.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_10x26.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_10x26_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52_asm_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52_int128_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/group.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/group_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/hash.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/hash_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/libsecp256k1-config.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/module/recovery/main_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num_gmp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num_gmp_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_4x64.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_4x64_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_8x32.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_8x32_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_low.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_low_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/secp256k1_c.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/util.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/CaCert.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Contract.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Contract.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Log.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Log.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Swazm.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Swazm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Util.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Util.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../library.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../platformio.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/sdkconfig.h" afterDir="false" />
+    </list>
+    <ignored path="platformio.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/../../cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="swazm-arduino" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../platformio.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/cJSON/cJSON.c">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../library.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../platformio.ini" />
+        <option value="$PROJECT_DIR$/../../library.json" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1691" />
+    <option name="y" value="1460" />
+    <option name="width" value="1534" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="swazm-arduino" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/platformio.ini" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../.." />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.PLATFORMIO_UPDATE">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PLATFORMIO_UPDATE" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="PLATFORMIO_UPDATE_ALL" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="swazm-arduino" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.PLATFORMIO_UPDATE" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec922180-b3d3-40f1-af0b-2568113a9075" name="Default" comment="" />
+      <created>1435919971910</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1435919971910</updated>
+      <workItem from="1546955176067" duration="309000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="309000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1691" y="1460" width="1534" height="1000" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Project" order="0" visible="true" weight="0.2304054" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="CMake" weight="0.32951945" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="right" id="Database" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../platformio.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/cJSON/cJSON.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../library.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

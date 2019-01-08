@@ -1,0 +1,22 @@
+{
+  "name": "SWAZM Arduino",
+  "keywords": "swazm, blockchain, embedded, ",
+  "description": "Arduino Library for communicating with the swazm blockchain",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/swazm/arduino.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Vali Malinoiuu",
+      "email": "vali@swazm.com",
+      "url": "https://swazm.com",
+      "maintainer": true
+    }
+  ],
+  "version": "0.0.1",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
