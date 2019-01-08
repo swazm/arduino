@@ -3,8 +3,8 @@
 
 #define USE_SERIAL Serial
 
-#define ENV_SSID     "YOUR_SSID"
-#define ENV_WIFI_KEY "YOUR_PASSWORD"
+#define ENV_SSID     "SWAZM"
+#define ENV_WIFI_KEY "zomp9neleli"
 const string SWAZM_HOST = "rpc.swazm.com";
 
 

@@ -14,77 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec922180-b3d3-40f1-af0b-2568113a9075" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/clion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/platformio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/cJSON/cJSON.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/cJSON/cJSON.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/include/secp256k1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/include/secp256k1_ecdh.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/include/secp256k1_recovery.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/basic-config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecdsa.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecdsa_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/eckey.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/eckey_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_const.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_const_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_gen.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_gen_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/ecmult_static_context.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_10x26.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_10x26_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52_asm_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_5x52_int128_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/field_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/group.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/group_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/hash.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/hash_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/libsecp256k1-config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/module/recovery/main_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num_gmp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num_gmp_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/num_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_4x64.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_4x64_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_8x32.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_8x32_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_low.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/scalar_low_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/secp256k1_c.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/secp256k1/src/util.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/CaCert.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Contract.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Contract.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Log.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Log.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Swazm.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Swazm.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Util.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lib/swazm/Util.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../library.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../platformio.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/sdkconfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../library.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../library.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main.cpp" afterDir="false" />
     </list>
     <ignored path="platformio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,8 +51,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../library.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            <state relative-caret-position="315">
+              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -135,6 +75,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../../platformio.ini" />
+        <option value="$PROJECT_DIR$/../../src/main.cpp" />
         <option value="$PROJECT_DIR$/../../library.json" />
       </list>
     </option>
@@ -175,6 +116,11 @@
             <path>
               <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="swazm-arduino" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="swazm-arduino" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,12 +195,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1435919971910</updated>
-      <workItem from="1546955176067" duration="309000" />
+      <workItem from="1546955176067" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309000" />
+    <option name="totallyTimeSpent" value="598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1691" y="1460" width="1534" height="1000" extended-state="0" />
@@ -294,10 +240,20 @@
     <entry file="file://$PROJECT_DIR$/../../lib/cJSON/cJSON.c">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/sdkconfig.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../library.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        <state relative-caret-position="315">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
