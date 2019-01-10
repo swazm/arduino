@@ -17,13 +17,13 @@ static secp256k1_context *ctx;
  * Public functions
  * */
 
-Contract::Contract(Swazm* _swazm, const string* address) {
+Contract::Contract(Swazm *_swazm, const string *address) {
     swazm = _swazm;
     contractAddress = address;
-    options.gas=0;
-    strcpy(options.from,"");
-    strcpy(options.to,"");
-    strcpy(options.gasPrice,"0");
+    options.gas = 0;
+    strcpy(options.from, "");
+    strcpy(options.to, "");
+    strcpy(options.gasPrice, "0");
 
     ctx = secp256k1_context_create(SECP256K1_CONTEXT_SIGN);
 }
@@ -39,14 +39,14 @@ string Contract::SetupContractData(const string *func, ...) {
     string contractBytes = GenerateContractBytes(func);
     ret = contractBytes;
 
-#if 0
+#if 1
     LOG("=SetupContractData::contractBytes=============");
     LOG(contractBytes.c_str());
     LOG("==============================================");
 #endif
 
     size_t paramCount = 0;
-    vector<string> params;
+    vector <string> params;
     char *p;
     char tmp[func->size()];
     memset(tmp, 0, sizeof(tmp));
@@ -59,7 +59,7 @@ string Contract::SetupContractData(const string *func, ...) {
         params.push_back(string(p));
         paramCount++;
     }
-    while(p != 0) {
+    while (p != 0) {
         p = strtok(0, ",");
         if (p != 0) {
             params.push_back(string(p));
@@ -68,7 +68,7 @@ string Contract::SetupContractData(const string *func, ...) {
     }
     va_list args;
     va_start(args, paramCount);
-    for( int i = 0; i < paramCount; ++i ) {
+    for (int i = 0; i < paramCount; ++i) {
         if (strncmp(params[i].c_str(), "uint", sizeof("uint")) == 0) {
             string output = GenerateBytesForUint(va_arg(args, uint32_t));
             ret = ret + output;
@@ -77,14 +77,14 @@ string Contract::SetupContractData(const string *func, ...) {
             string output = GenerateBytesForInt(va_arg(args, int32_t));
             ret = ret + string(output);
         } else if (strncmp(params[i].c_str(), "address", sizeof("address")) == 0) {
-            string output = GenerateBytesForAddress(va_arg(args, string*));
+            string output = GenerateBytesForAddress(va_arg(args, string * ));
             ret = ret + string(output);
         } else if (strncmp(params[i].c_str(), "string", sizeof("string")) == 0) {
-            string output = GenerateBytesForString(va_arg(args, string*));
+            string output = GenerateBytesForString(va_arg(args, string * ));
             ret = ret + string(output);
         } else if (strncmp(params[i].c_str(), "bytes", sizeof("bytes")) == 0) {
-            long len = strtol(params[i].c_str()+5, nullptr,10);
-            string output = GenerateBytesForBytes(va_arg(args, char*), len);
+            long len = strtol(params[i].c_str() + 5, nullptr, 10);
+            string output = GenerateBytesForBytes(va_arg(args, char * ), len);
             ret = ret + string(output);
         }
     }
@@ -99,7 +99,7 @@ string Contract::SetupContractData(const string *func, ...) {
     return ret;
 }
 
-string Contract::Call(const string* param) {
+string Contract::Call(const string *param) {
     const string from = string(options.from);
     const long gasPrice = strtol(options.gasPrice, nullptr, 10);
     const string value = "";
@@ -117,13 +117,11 @@ string Contract::Call(const string* param) {
 string Contract::SendTransaction(uint32_t nonceVal, uint32_t gasPriceVal, uint32_t gasLimitVal,
                                  string *toStr, string *valueStr, string *dataStr) {
     uint8_t signature[SIGNATURE_LENGTH];
-    memset(signature,0,SIGNATURE_LENGTH);
+    memset(signature, 0, SIGNATURE_LENGTH);
     int recid[1] = {0};
-    GenerateSignature(signature, recid, nonceVal, gasPriceVal, gasLimitVal,
-                          toStr, valueStr, dataStr);
-    vector<uint8_t>param = RlpEncodeForRawTransaction(nonceVal, gasPriceVal, gasLimitVal,
-                                         toStr, valueStr, dataStr,
-                                         signature, recid[0]);
+    GenerateSignature(signature, recid, nonceVal, gasPriceVal, gasLimitVal, toStr, valueStr, dataStr);
+    vector <uint8_t> param = RlpEncodeForRawTransaction(nonceVal, gasPriceVal, gasLimitVal, toStr, valueStr, dataStr,
+                                                        signature, recid[0]);
     string paramStr = Util::VectorToString(param);
 
 #if 0
@@ -144,9 +142,10 @@ string Contract::SendTransaction(uint32_t nonceVal, uint32_t gasPriceVal, uint32
  * Private functions
  * */
 
-void Contract::GenerateSignature(uint8_t* signature, int* recid, uint32_t nonceVal, uint32_t gasPriceVal, uint32_t  gasLimitVal,
-                                string* toStr, string* valueStr, string* dataStr) {
-    vector<uint8_t> encoded = RlpEncode(nonceVal, gasPriceVal, gasLimitVal, toStr, valueStr, dataStr);
+void Contract::GenerateSignature(uint8_t *signature, int *recid, uint32_t nonceVal, uint32_t gasPriceVal,
+                                 uint32_t gasLimitVal,
+                                 string *toStr, string *valueStr, string *dataStr) {
+    vector <uint8_t> encoded = RlpEncode(nonceVal, gasPriceVal, gasLimitVal, toStr, valueStr, dataStr);
 
     // hash
     string t = Util::VectorToString(encoded);
@@ -155,8 +154,8 @@ void Contract::GenerateSignature(uint8_t* signature, int* recid, uint32_t nonceV
     // sign
     char hash[hashedStr.size()];
     memset(hash, 0, sizeof(hash));
-    Util::ConvertCharStrToUintArray((uint8_t*)hash, (uint8_t*)hashedStr.c_str());
-    Sign((uint8_t*)hash, signature, recid);
+    Util::ConvertCharStrToUintArray((uint8_t *) hash, (uint8_t *) hashedStr.c_str());
+    Sign((uint8_t *) hash, signature, recid);
 
 #if 0
     printf("\nhash_input : %s\n", tmp);
@@ -168,12 +167,12 @@ void Contract::GenerateSignature(uint8_t* signature, int* recid, uint32_t nonceV
 #endif
 }
 
-string Contract::GenerateContractBytes(const string* func) {
+string Contract::GenerateContractBytes(const string *func) {
     string in = "0x";
     char intmp[8];
     memset(intmp, 0, 8);
     int i = 0;
-    for (int i = 0; i<128; i++) {
+    for (int i = 0; i < 128; i++) {
         char c = (*func)[i];
         if (c == '\0') {
             break;
@@ -192,13 +191,13 @@ string Contract::GenerateBytesForUint(const uint32_t value) {
 
     // check number of digits
     char dummy[64];
-    int digits = sprintf(dummy, "%x", (uint32_t)value);
+    int digits = sprintf(dummy, "%x", (uint32_t) value);
 
     // fill 0 and copy number to string
-    for(int i = 2; i < 2+64-digits; i++){
+    for (int i = 2; i < 2 + 64 - digits; i++) {
         sprintf(output, "%s%s", output, "0");
     }
-    sprintf(output,"%s%x", output, (uint32_t)value);
+    sprintf(output, "%s%x", output, (uint32_t) value);
     return string(output);
 }
 
@@ -217,18 +216,18 @@ string Contract::GenerateBytesForInt(const int32_t value) {
     } else {
         sprintf(fill, "%s", "f");
     }
-    for(int i = 2; i < 2+64-digits; i++){
+    for (int i = 2; i < 2 + 64 - digits; i++) {
         sprintf(output, "%s%s", output, fill);
     }
-    sprintf(output,"%s%x", output, value);
+    sprintf(output, "%s%x", output, value);
     return string(output);
 }
 
-string Contract::GenerateBytesForAddress(const string* value) {
+string Contract::GenerateBytesForAddress(const string *value) {
     size_t digits = value->size() - 2;
 
     string zeros = "";
-    for(int i = 2; i < 2+64-digits; i++){
+    for (int i = 2; i < 2 + 64 - digits; i++) {
         zeros = zeros + "0";
     }
     string tmp = string(*value);
@@ -236,54 +235,54 @@ string Contract::GenerateBytesForAddress(const string* value) {
     return zeros + tmp;
 }
 
-string Contract::GenerateBytesForString(const string* value) {
+string Contract::GenerateBytesForString(const string *value) {
     string zeros = "";
-    size_t remain = 32 - ((value->size()-2) % 32);
-    for(int i = 0; i < remain + 32; i++){
+    size_t remain = 32 - ((value->size() - 2) % 32);
+    for (int i = 0; i < remain + 32; i++) {
         zeros = zeros + "0";
     }
 
     return *value + zeros;
 }
 
-string Contract::GenerateBytesForBytes(const char* value, const int len) {
+string Contract::GenerateBytesForBytes(const char *value, const int len) {
     char output[70];
     memset(output, 0, sizeof(output));
 
-    for(int i = 0; i < len; i++){
+    for (int i = 0; i < len; i++) {
         sprintf(output, "%s%x", output, value[i]);
     }
-    size_t remain = 32 - ((strlen(output)-2) % 32);
-    for(int i = 0; i < remain + 32; i++){
+    size_t remain = 32 - ((strlen(output) - 2) % 32);
+    for (int i = 0; i < remain + 32; i++) {
         sprintf(output, "%s%s", output, "0");
     }
 
     return string(output);
 }
 
-vector<uint8_t> Contract::RlpEncode(
-                         uint32_t nonceVal, uint32_t gasPriceVal, uint32_t  gasLimitVal,
-                         string* toStr, string* valueStr, string* dataStr) {
-    vector<uint8_t> nonce = Util::ConvertNumberToVector(nonceVal);
-    vector<uint8_t> gasPrice = Util::ConvertNumberToVector(gasPriceVal);
-    vector<uint8_t> gasLimit = Util::ConvertNumberToVector(gasLimitVal);
-    vector<uint8_t> to = Util::ConvertStringToVector(toStr);
-    vector<uint8_t> value = Util::ConvertStringToVector(valueStr);
-    vector<uint8_t> data = Util::ConvertStringToVector(dataStr);
+vector <uint8_t> Contract::RlpEncode(
+        uint32_t nonceVal, uint32_t gasPriceVal, uint32_t gasLimitVal,
+        string *toStr, string *valueStr, string *dataStr) {
+    vector <uint8_t> nonce = Util::ConvertNumberToVector(nonceVal);
+    vector <uint8_t> gasPrice = Util::ConvertNumberToVector(gasPriceVal);
+    vector <uint8_t> gasLimit = Util::ConvertNumberToVector(gasLimitVal);
+    vector <uint8_t> to = Util::ConvertStringToVector(toStr);
+    vector <uint8_t> value = Util::ConvertStringToVector(valueStr);
+    vector <uint8_t> data = Util::ConvertStringToVector(dataStr);
 
-    vector<uint8_t> outputNonce = Util::RlpEncodeItemWithVector(nonce);
-    vector<uint8_t> outputGasPrice = Util::RlpEncodeItemWithVector(gasPrice);
-    vector<uint8_t> outputGasLimit = Util::RlpEncodeItemWithVector(gasLimit);
-    vector<uint8_t> outputTo = Util::RlpEncodeItemWithVector(to);
-    vector<uint8_t> outputValue = Util::RlpEncodeItemWithVector(value);
-    vector<uint8_t> outputData = Util::RlpEncodeItemWithVector(data);
+    vector <uint8_t> outputNonce = Util::RlpEncodeItemWithVector(nonce);
+    vector <uint8_t> outputGasPrice = Util::RlpEncodeItemWithVector(gasPrice);
+    vector <uint8_t> outputGasLimit = Util::RlpEncodeItemWithVector(gasLimit);
+    vector <uint8_t> outputTo = Util::RlpEncodeItemWithVector(to);
+    vector <uint8_t> outputValue = Util::RlpEncodeItemWithVector(value);
+    vector <uint8_t> outputData = Util::RlpEncodeItemWithVector(data);
 
-    vector<uint8_t> encoded = Util::RlpEncodeWholeHeaderWithVector(
-            outputNonce.size()+
-            outputGasPrice.size()+
-            outputGasLimit.size()+
-            outputTo.size()+
-            outputValue.size()+
+    vector <uint8_t> encoded = Util::RlpEncodeWholeHeaderWithVector(
+            outputNonce.size() +
+            outputGasPrice.size() +
+            outputGasLimit.size() +
+            outputTo.size() +
+            outputValue.size() +
             outputData.size());
 
 
@@ -305,13 +304,13 @@ vector<uint8_t> Contract::RlpEncode(
     return encoded;
 }
 
-void Contract::Sign(uint8_t* hash, uint8_t* sig, int* recid) {
+void Contract::Sign(uint8_t *hash, uint8_t *sig, int *recid) {
     secp256k1_nonce_function noncefn = secp256k1_nonce_function_rfc6979;
-    void* data_ = NULL;
+    void *data_ = NULL;
 
     secp256k1_ecdsa_recoverable_signature signature;
     memset(&signature, 0, sizeof(signature));
-    if (secp256k1_ecdsa_sign_recoverable(ctx, &signature, hash,  privateKey, noncefn, data_) == 0) {
+    if (secp256k1_ecdsa_sign_recoverable(ctx, &signature, hash, privateKey, noncefn, data_) == 0) {
         return;
     }
 
@@ -333,37 +332,37 @@ void Contract::Sign(uint8_t* hash, uint8_t* sig, int* recid) {
 #endif
 }
 
-vector<uint8_t> Contract::RlpEncodeForRawTransaction(
-                             uint32_t nonceVal, uint32_t gasPriceVal, uint32_t  gasLimitVal,
-                             string* toStr, string* valueStr, string* dataStr, uint8_t* sig, uint8_t recid) {
+vector <uint8_t> Contract::RlpEncodeForRawTransaction(
+        uint32_t nonceVal, uint32_t gasPriceVal, uint32_t gasLimitVal,
+        string *toStr, string *valueStr, string *dataStr, uint8_t *sig, uint8_t recid) {
 
-    vector<uint8_t> signature;
-    for (int i=0; i<SIGNATURE_LENGTH; i++) {
+    vector <uint8_t> signature;
+    for (int i = 0; i < SIGNATURE_LENGTH; i++) {
         signature.push_back(sig[i]);
     }
-    vector<uint8_t> nonce = Util::ConvertNumberToVector(nonceVal);
-    vector<uint8_t> gasPrice = Util::ConvertNumberToVector(gasPriceVal);
-    vector<uint8_t> gasLimit = Util::ConvertNumberToVector(gasLimitVal);
-    vector<uint8_t> to = Util::ConvertStringToVector(toStr);
-    vector<uint8_t> value = Util::ConvertStringToVector(valueStr);
-    vector<uint8_t> data = Util::ConvertStringToVector(dataStr);
+    vector <uint8_t> nonce = Util::ConvertNumberToVector(nonceVal);
+    vector <uint8_t> gasPrice = Util::ConvertNumberToVector(gasPriceVal);
+    vector <uint8_t> gasLimit = Util::ConvertNumberToVector(gasLimitVal);
+    vector <uint8_t> to = Util::ConvertStringToVector(toStr);
+    vector <uint8_t> value = Util::ConvertStringToVector(valueStr);
+    vector <uint8_t> data = Util::ConvertStringToVector(dataStr);
 
-    vector<uint8_t> outputNonce = Util::RlpEncodeItemWithVector(nonce);
-    vector<uint8_t> outputGasPrice = Util::RlpEncodeItemWithVector(gasPrice);
-    vector<uint8_t> outputGasLimit = Util::RlpEncodeItemWithVector(gasLimit);
-    vector<uint8_t> outputTo = Util::RlpEncodeItemWithVector(to);
-    vector<uint8_t> outputValue = Util::RlpEncodeItemWithVector(value);
-    vector<uint8_t> outputData = Util::RlpEncodeItemWithVector(data);
+    vector <uint8_t> outputNonce = Util::RlpEncodeItemWithVector(nonce);
+    vector <uint8_t> outputGasPrice = Util::RlpEncodeItemWithVector(gasPrice);
+    vector <uint8_t> outputGasLimit = Util::RlpEncodeItemWithVector(gasLimit);
+    vector <uint8_t> outputTo = Util::RlpEncodeItemWithVector(to);
+    vector <uint8_t> outputValue = Util::RlpEncodeItemWithVector(value);
+    vector <uint8_t> outputData = Util::RlpEncodeItemWithVector(data);
 
-    vector<uint8_t> R;
-    R.insert(R.end(), signature.begin(), signature.begin()+(SIGNATURE_LENGTH/2));
-    vector<uint8_t> S;
-    S.insert(S.end(), signature.begin()+(SIGNATURE_LENGTH/2), signature.end());
-    vector<uint8_t> V;
-    V.push_back((uint8_t)(recid+27)); // 27 is a magic number for ereum spec
-    vector<uint8_t> outputR = Util::RlpEncodeItemWithVector(R);
-    vector<uint8_t> outputS = Util::RlpEncodeItemWithVector(S);
-    vector<uint8_t> outputV = Util::RlpEncodeItemWithVector(V);
+    vector <uint8_t> R;
+    R.insert(R.end(), signature.begin(), signature.begin() + (SIGNATURE_LENGTH / 2));
+    vector <uint8_t> S;
+    S.insert(S.end(), signature.begin() + (SIGNATURE_LENGTH / 2), signature.end());
+    vector <uint8_t> V;
+    V.push_back((uint8_t)(recid + 27)); // 27 is a magic number for ereum spec
+    vector <uint8_t> outputR = Util::RlpEncodeItemWithVector(R);
+    vector <uint8_t> outputS = Util::RlpEncodeItemWithVector(S);
+    vector <uint8_t> outputV = Util::RlpEncodeItemWithVector(V);
 
 #if 0
     printf("\noutputNonce--------\n ");
@@ -387,16 +386,16 @@ vector<uint8_t> Contract::RlpEncodeForRawTransaction(
     printf("\n");
 #endif
 
-    vector<uint8_t> encoded = Util::RlpEncodeWholeHeaderWithVector(
-                                        outputNonce.size()+
-                                        outputGasPrice.size()+
-                                        outputGasLimit.size()+
-                                        outputTo.size()+
-                                        outputValue.size()+
-                                        outputData.size()+
-                                        outputR.size()+
-                                        outputS.size()+
-                                        outputV.size());
+    vector <uint8_t> encoded = Util::RlpEncodeWholeHeaderWithVector(
+            outputNonce.size() +
+            outputGasPrice.size() +
+            outputGasLimit.size() +
+            outputTo.size() +
+            outputValue.size() +
+            outputData.size() +
+            outputR.size() +
+            outputS.size() +
+            outputV.size());
 
     encoded.insert(encoded.end(), outputNonce.begin(), outputNonce.end());
     encoded.insert(encoded.end(), outputGasPrice.begin(), outputGasPrice.end());
